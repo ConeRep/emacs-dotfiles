@@ -11,5 +11,4 @@ My emacs dotfiles
 - Magit
 - Clippy
 - No-littering
-- General
 - Evil
