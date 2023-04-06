@@ -12,3 +12,4 @@ My emacs dotfiles
 - Clippy
 - No-littering
 - General
+- Evil
