@@ -9,3 +9,6 @@ My emacs dotfiles
 - Counsel
 - Doom modeline
 - Magit
+- Clippy
+- No-littering
+- General
