@@ -13,12 +13,15 @@
 
 (set-face-attribute 'default nil :font "Fira Code Semibold" :height 100)
 
-(add-to-list 'custom-theme-load-path "c:/Users/bzsol/AppData/Roaming/.emacs.d/atom-one-dark-theme/")
+(add-to-list 'custom-theme-load-path "~/.emacs.d/atom-one-dark-theme/")
 
 (load-theme 'atom-one-dark t)
 
 ;; Make ESC quit prompts
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
+
+;; Make emacs go fullscreen on kde
+(setq frame-resize-pixelwise t)
 
 ;; Initialize package sources
 (require 'package)
@@ -90,7 +93,7 @@
 (global-linum-mode t)
 
 (add-to-list 'load-path
-              "c:/Users/bzsol/AppData/Roaming/.emacs.d/yasnippet/")
+              "~/.emacs.d/yasnippet/")
 (require 'yasnippet)
 (yas-global-mode 1)
 
