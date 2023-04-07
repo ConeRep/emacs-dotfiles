@@ -12,3 +12,10 @@ My emacs dotfiles
 - Clippy
 - No-littering
 - Evil
+
+## Bugs
+- Some applications will promped with a warning on first startup
+
+## Bugs that have been fixed
+
+- KDE won't go maximize fully
