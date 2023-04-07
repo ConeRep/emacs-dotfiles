@@ -14,6 +14,7 @@ My emacs dotfiles
 - Evil
 
 ## Bugs
+
 - Some applications will promped with a warning on first startup
 
 ## Bugs that have been fixed
