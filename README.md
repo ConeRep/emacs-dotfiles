@@ -15,7 +15,7 @@ My emacs dotfiles
 
 ## Bugs
 
-- Some applications will promped with a warning on first startup
+- Some some emacs plugins will promped with a warning on first startup
 
 ## Bugs that have been fixed
 
