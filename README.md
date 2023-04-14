@@ -19,4 +19,4 @@ My emacs dotfiles
 
 ## Bugs that have been fixed
 
-- KDE won't go maximize fully
+- KDE won't go maximized fully
