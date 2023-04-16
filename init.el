@@ -46,7 +46,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(evil no-littering company-tabnine clippy general all-the-icons rebase-mode magit-blame magit doom-theme doom-modeline counsel ivy command-log-mode use-package)))
+   '(vterm beacon evil no-littering company-tabnine clippy general all-the-icons rebase-mode magit-blame magit doom-theme doom-modeline counsel ivy command-log-mode use-package)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -90,8 +90,6 @@
   :init (doom-modeline-mode 1)
   :custom ((doom-modeline-height 15)))
 
-(global-linum-mode t)
-
 (add-to-list 'load-path
               "~/.emacs.d/yasnippet/")
 (require 'yasnippet)
@@ -102,6 +100,8 @@
   :bind (("C-c g" . magit-status)
          ("C-c C-g l" . magit-file-log)
          ("C-c f" . magit-grep)))
+
+(use-package vterm)
 
 (use-package clippy)
 
@@ -142,3 +142,9 @@
 
   (evil-set-initial-state 'messages-buffer-mode 'normal)
   (evil-set-initial-state 'dashboard-mode 'normal))
+
+(setq global-display-line-numbers 'relative)
+
+(use-package beacon)
+(beacon-mode 1)
+
