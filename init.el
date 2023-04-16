@@ -143,8 +143,8 @@
   (evil-set-initial-state 'messages-buffer-mode 'normal)
   (evil-set-initial-state 'dashboard-mode 'normal))
 
-(setq global-display-line-numbers 'relative)
-
 (use-package beacon)
 (beacon-mode 1)
 
+(global-display-line-numbers-mode 1)
+(setq display-line-numbers-type 'relative)
