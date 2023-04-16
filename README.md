@@ -12,6 +12,8 @@ My emacs dotfiles
 - Clippy
 - No-littering
 - Evil
+- vterm
+- beacon
 
 ## Bugs
 
