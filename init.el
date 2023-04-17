@@ -42,7 +42,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(doom-themes treemacs neotree vterm beacon evil no-littering company-tabnine clippy general all-the-icons rebase-mode magit-blame magit doom-theme doom-modeline counsel ivy command-log-mode use-package)))
+   '(yasnippet-snippets yasnippet doom-themes treemacs neotree vterm beacon evil no-littering company-tabnine clippy general all-the-icons rebase-mode magit-blame magit doom-theme doom-modeline counsel ivy command-log-mode use-package)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -109,8 +109,22 @@
   :init (doom-modeline-mode 1)
   :custom ((doom-modeline-height 15)))
 
-(add-to-list 'load-path
-              "~/.emacs.d/yasnippet/")
+(use-package yasnippet                  ; Snippets
+  :ensure t
+  :config
+  (validate-setq
+   yas-verbosity 1                      ; No need to be so verbose
+   yas-wrap-around-region t)
+
+  (with-eval-after-load 'yasnippet
+    (validate-setq yas-snippet-dirs '(yasnippet-snippets-dir)))
+
+  (yas-reload-all)
+  (yas-global-mode))
+
+(use-package yasnippet-snippets         ; Collection of snippets
+  :ensure t)
+
 (require 'yasnippet)
 (yas-global-mode 1)
 
