@@ -109,24 +109,22 @@
   :init (doom-modeline-mode 1)
   :custom ((doom-modeline-height 15)))
 
-(use-package yasnippet                  ; Snippets
+(use-package yasnippet
   :ensure t
   :config
-  (validate-setq
-   yas-verbosity 1                      ; No need to be so verbose
-   yas-wrap-around-region t)
-
-  (with-eval-after-load 'yasnippet
-    (validate-setq yas-snippet-dirs '(yasnippet-snippets-dir)))
-
+  (use-package yasnippet-snippets
+    :ensure t)
+  (yas-global-mode t)
+  (define-key yas-minor-mode-map (kbd "<tab>") nil)
+  (define-key yas-minor-mode-map (kbd "C-'") #'yas-expand)
+  (add-to-list #'yas-snippet-dirs "my-personal-snippets")
   (yas-reload-all)
-  (yas-global-mode))
-
-(use-package yasnippet-snippets         ; Collection of snippets
-  :ensure t)
-
-(require 'yasnippet)
-(yas-global-mode 1)
+  (setq yas-prompt-functions '(yas-ido-prompt))
+  (defun help/yas-after-exit-snippet-hook-fn ()
+    (prettify-symbols-mode)
+    (prettify-symbols-mode))
+  (add-hook 'yas-after-exit-snippet-hook #'help/yas-after-exit-snippet-hook-fn)
+  :diminish yas-minor-mode)
 
 (use-package magit
   :commands magit-get-top-dir
