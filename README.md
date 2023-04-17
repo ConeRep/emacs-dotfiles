@@ -4,12 +4,12 @@ My emacs dotfiles
 ![screenshot2](https://user-images.githubusercontent.com/108507221/232368424-45a82e5b-7402-42e8-9ea4-2bfddcbad424.png)
 
 - Yasnippet
-- Atom One Dark
+- Doom-themes
+- Doom-modeline
 - Fira Code Font (No ligatures by default)
 - Command log mode
 - Ivy
 - Counsel
-- Doom modeline
 - Magit
 - Clippy
 - No-littering
