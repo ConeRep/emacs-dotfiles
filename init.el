@@ -13,10 +13,6 @@
 
 (set-face-attribute 'default nil :font "Fira Code Semibold" :height 100)
 
-(add-to-list 'custom-theme-load-path "~/.emacs.d/atom-one-dark-theme/")
-
-(load-theme 'atom-one-dark t)
-
 ;; Make ESC quit prompts
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
 
@@ -46,13 +42,36 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(vterm beacon evil no-littering company-tabnine clippy general all-the-icons rebase-mode magit-blame magit doom-theme doom-modeline counsel ivy command-log-mode use-package)))
+   '(doom-themes treemacs neotree vterm beacon evil no-littering company-tabnine clippy general all-the-icons rebase-mode magit-blame magit doom-theme doom-modeline counsel ivy command-log-mode use-package)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+;; Add package doom themes
+(use-package doom-themes
+  :ensure t
+  :config
+  ;; Global settings (defaults)
+  (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
+        doom-themes-enable-italic t) ; if nil, italics is universally disabled
+  (load-theme 'doom-one t)
+
+  ;; Enable flashing mode-line on errors
+  (doom-themes-visual-bell-config)
+  ;; Enable custom neotree theme (all-the-icons must be installed!)
+  (doom-themes-neotree-config)
+  ;; or for treemacs users
+  (setq doom-themes-treemacs-theme "doom-atom") ; use "doom-colors" for less minimal icon theme
+  (doom-themes-treemacs-config)
+  ;; Corrects (and improves) org-mode's native fontification.
+  (doom-themes-org-config))
+
+;; Load doom themes
+(require 'doom-themes)
+(load-theme 'doom-dracula t)
 
 (use-package command-log-mode)
 
@@ -148,3 +167,5 @@
 
 (global-display-line-numbers-mode 1)
 (setq display-line-numbers-type 'relative)
+
+(use-package treemacs)
