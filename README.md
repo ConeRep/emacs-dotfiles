@@ -1,7 +1,7 @@
 # emacs-dotfiles
 My emacs dotfiles
 
-![Screenshot1](https://user-images.githubusercontent.com/108507221/232366535-9c779865-44b8-4c0e-a9f5-1a2b0ecc3920.png)
+![screenshot2](https://user-images.githubusercontent.com/108507221/232368424-45a82e5b-7402-42e8-9ea4-2bfddcbad424.png)
 
 - Yasnippet
 - Atom One Dark
