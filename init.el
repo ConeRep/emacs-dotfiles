@@ -132,7 +132,8 @@
          ("C-c C-g l" . magit-file-log)
          ("C-c f" . magit-grep)))
 
-(use-package vterm)
+; Only works on linux (uncomment it if you are using linux)
+; (use-package vterm)
 
 (use-package clippy)
 
