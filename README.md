@@ -17,10 +17,11 @@ My emacs dotfiles
 - vterm
 - beacon
 
-## Bugs
+## Problems
 
 - Some some emacs plugins will promped with a warning on first startup
+- Vterm only works on linux
 
-## Bugs that have been fixed
+## Problems that have been fixed
 
 - KDE won't go maximized fully
